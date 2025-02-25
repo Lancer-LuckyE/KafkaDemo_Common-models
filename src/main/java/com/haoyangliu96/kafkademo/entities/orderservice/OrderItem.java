@@ -27,6 +27,7 @@ public class OrderItem {
     private UUID orderId;
     private UUID productId;
     private int quantity;
+    private String productName;
 
     @CreatedDate
     private LocalDateTime createdAt;

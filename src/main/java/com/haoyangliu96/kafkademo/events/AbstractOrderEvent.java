@@ -12,7 +12,9 @@ import java.util.UUID;
 @ToString
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "eventType") // 在 JSON 里加上类型信息
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = OrderCreatedEvent.class, name = "ORDER_CREATED")
+        @JsonSubTypes.Type(value = OrderCreatedEvent.class, name = "ORDER_CREATED"),
+        @JsonSubTypes.Type(value = OrderOutOfStockEvent.class, name = "OUT_OF_STOCK"),
+        @JsonSubTypes.Type(value = OrderReadyForPaymentEvent.class, name = "READY_FOR_PAYMENT")
 })
 @NoArgsConstructor
 @AllArgsConstructor
