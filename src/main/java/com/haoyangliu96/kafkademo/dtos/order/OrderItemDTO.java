@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
-public class OrderItemsDTO {
+public class OrderItemDTO {
     private ItemDTO item;
     private int quantity;
 }

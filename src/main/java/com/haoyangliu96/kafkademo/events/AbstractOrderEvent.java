@@ -14,7 +14,10 @@ import java.util.UUID;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = OrderCreatedEvent.class, name = "ORDER_CREATED"),
         @JsonSubTypes.Type(value = OrderOutOfStockEvent.class, name = "OUT_OF_STOCK"),
-        @JsonSubTypes.Type(value = OrderReadyForPaymentEvent.class, name = "READY_FOR_PAYMENT")
+        @JsonSubTypes.Type(value = OrderReadyForPaymentEvent.class, name = "READY_FOR_PAYMENT"),
+        @JsonSubTypes.Type(value = OrderPaymentSuccessEvent.class, name = "PAYMENT_SUCCESS"),
+        @JsonSubTypes.Type(value = OrderPaymentFailedEvent.class, name = "PAYMENT_FAILED"),
+        @JsonSubTypes.Type(value = InventoryUpdateEvent.class, name = "UPDATE_STOCK")
 })
 @NoArgsConstructor
 @AllArgsConstructor

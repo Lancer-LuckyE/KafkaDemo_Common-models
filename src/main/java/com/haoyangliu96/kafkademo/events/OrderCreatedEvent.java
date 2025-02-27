@@ -1,7 +1,7 @@
 package com.haoyangliu96.kafkademo.events;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.haoyangliu96.kafkademo.dtos.order.OrderItemsDTO;
+import com.haoyangliu96.kafkademo.dtos.order.OrderItemDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,9 +16,9 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderCreatedEvent extends AbstractOrderEvent {
-    private List<OrderItemsDTO> itemIds;
+    private List<OrderItemDTO> itemIds;
 
-    public OrderCreatedEvent(UUID orderId, List<OrderItemsDTO> itemIds) {
+    public OrderCreatedEvent(UUID orderId, List<OrderItemDTO> itemIds) {
         super(orderId, KafkaOrderEventType.ORDER_CREATED);
         this.itemIds = itemIds;
     }
